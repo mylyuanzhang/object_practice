@@ -11,9 +11,17 @@ class Student(object):
     def get_gender(self):
         if self.__gender == 'F' or 'female' or 'Female' or '女':
             print('女')
+    
+    def get_name(self):
+        print(self.name)
+
+class Lisa(Student):
+    def __init__(self):
+        self.name = 'Lisa'
+        self.__gender = 'Female'
 
 if __name__ == '__main__':
-    lisa = Student('Lisa', 'female')
-    lisa.get_gender()
-    lisa.set_gender('F')
-    lisa.get_gender()
+    lisa = Lisa()
+    lisa.get_name()
+    # lisa.set_gender('F')
+    # lisa.get_gender()
